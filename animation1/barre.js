@@ -1,22 +1,31 @@
 var pos = 0, 
-    idBarre = null;
- 
+    idBarre = 200;
 
 
-function myMove() {
-  var elem = document.getElementById("animate");   
+
+function Move() {
+  var barre = document.getElementById("animate");  
 
   clearInterval(idBarre);
 
   id = setInterval(frame, 5);
+
   function frame() {
-    if (pos == 350) {
+
+    if (pos == 50) {
       clearInterval(id);
+
     } else {
 
+      barre.style.display = 'block';
       pos++; 
-      elem.style.top = pos + "px"; 
-      elem.style.left = pos + "px"; 
+      barre.style.right = pos + "px"; 
+      barre.style.dow = pos + "px"; 
+     
     }
   }
+
+
+
+
 }
